@@ -1,11 +1,11 @@
 import React from 'react';
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS 가져오기
 
 function App() {
   return (
-    
     <div className="container">
-      <header className="my-4 text-center">
+      <header className="App-header"> 
         <h1 className="text-primary">Welcome to KW Tipster</h1>
         <p className="lead">Your guide to course registration success!</p>
       </header>
