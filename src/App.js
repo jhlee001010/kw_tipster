@@ -4,38 +4,29 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS 가져오기
 
 function App() {
   return (
-    <div className="container">
-      <header className="App-header"> 
-        <h1 className="text-primary">Welcome to KW Tipster</h1>
-        <p className="lead">Your guide to course registration success!</p>
+    <div className="container-fluid">
+       {/* Header */}
+       <header className="App-header">
+        <h1 className="text-info">수강!팡</h1>
+        <p className="lead">모두의 수강신청의 정상화를 꿈꾸며!</p>
       </header>
 
-      <main>
-        <div className="row">
-          <div className="col-md-6 mb-3">
-            <div className="card">
-              <div className="card-body">
-                <h5 className="card-title">Tips for Beginners</h5>
-                <p className="card-text">
-                  Learn how to efficiently register for courses and plan your semester.
-                </p>
-                <button className="btn btn-primary">Learn More</button>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-6 mb-3">
-            <div className="card">
-              <div className="card-body">
-                <h5 className="card-title">Advanced Strategies</h5>
-                <p className="card-text">
-                  Master advanced techniques for creating the perfect schedule.
-                </p>
-                <button className="btn btn-success">Get Started</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
+      {/* Sidebar */}
+      <nav className="sidebar text-black">
+        <h4 className="text-center py-3">Menu</h4>
+        <ul className="nav flex-column">
+          {Array.from({ length: 20 }, (_, index) => (
+            <li className="nav-item" key={index}>
+              <a
+                className="nav-link text-black"
+                href={`#section${index + 1}`}
+              >
+                Section {index + 1}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
 
       <footer className="mt-4 text-center">
         <p className="text-muted">&copy; 2024 KW Tipster</p>
