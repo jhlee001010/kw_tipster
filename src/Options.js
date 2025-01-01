@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css"; // 버튼 스타일 포함된 CSS
+import "./App.css"; // 스타일 파일 가져오기
 
 const Options = (props) => {
   const options = props.options.map((option) => (
@@ -16,5 +16,3 @@ const Options = (props) => {
 };
 
 export default Options;
-
-
