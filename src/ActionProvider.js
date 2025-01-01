@@ -12,11 +12,16 @@ class ActionProvider {
   };
 
   handleCourseRegistrationAction = () => {
-    const userMessage = this.createChatBotMessage("수강신청");
+    const userMessage = this.createChatBotMessage("수강신청", {
+      delay: 500,
+      withAvatar: false,
+    });
+
     const followUpMessage = this.createChatBotMessage(
-      "아래에서 선택해주세요:",
+      "2025 1학기 수강신청 일정입니다.",
       {
-        widget: "courseRegistrationOptions", // 세부 선택지 위젯 연결
+        widget: "courseDetailOptions",
+        delay: 1000,
       }
     );
 
@@ -24,18 +29,8 @@ class ActionProvider {
     this.updateChatbotState(followUpMessage);
   };
 
-  handleCourseSchedule = () => {
-    const message = this.createChatBotMessage("수강신청 일정 정보입니다.");
-    this.updateChatbotState(message);
-  };
-
-  handleCourseMethods = () => {
-    const message = this.createChatBotMessage("수강신청 방법 안내입니다.");
-    this.updateChatbotState(message);
-  };
-
-  handleCourseTips = () => {
-    const message = this.createChatBotMessage("수강신청 팁입니다: 1. 빠르게 2. 우선순위 설정 3. 시간표 미리 준비.");
+  handleCourseSchedule = (messageText) => {
+    const message = this.createChatBotMessage(messageText);
     this.updateChatbotState(message);
   };
 
@@ -48,3 +43,5 @@ class ActionProvider {
 }
 
 export default ActionProvider;
+
+
