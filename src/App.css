@@ -5,7 +5,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f8f9fa;
-  /* Bootstrap 기본 배경색과 맞춤 */
 }
 
 /* Header 스타일 */
@@ -13,17 +12,10 @@ body {
   width: 100%;
   height: 3.75rem;
   background-color: white;
-  /* 상단 배너 배경색 */
-  align-items: center;
-  /* 세로 정렬 */
   padding: 0 1.25rem;
-  /* 좌우 여백 */
   border-bottom: 2px solid #8a1601;
   display: flex;
-  /* flex로 자식 요소들이 가로로 배치됨 */
   align-items: center;
-  /* 수직 중앙 정렬 */
-  position: relative; /* Header는 별도의 레이어 */
 }
 
 .headertext {
@@ -37,12 +29,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 3.75rem); /* 헤더 높이 제외 */
+  height: calc(100vh - 3.75rem);
 }
 
 /* 챗봇 메시지 정렬 CSS */
 .react-chatbot-kit-chat-container {
-  text-align: center; /* 전체 챗봇 컨테이너 중앙 정렬 */
+  text-align: center;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -52,13 +44,13 @@ body {
 .react-chatbot-kit-chat-messages-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* 메시지 가운데 정렬 */
+  align-items: center;
   padding: 10px;
 }
 
 .react-chatbot-kit-chat-message {
-  max-width: 80%; /* 메시지 최대 너비 지정 */
-  align-self: center; /* 개별 메시지 중앙 정렬 */
+  max-width: 80%;
+  align-self: center;
   margin: 5px 0;
   padding: 10px;
   border-radius: 5px;
@@ -70,6 +62,9 @@ body {
   text-align: left;
   background-color: #376b7e;
   color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .react-chatbot-kit-user-chat-message {
@@ -77,6 +72,9 @@ body {
   text-align: left;
   background-color: #f1f1f1;
   color: black;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
 }
 
 /* 채팅 입력창 스타일 */
@@ -86,21 +84,13 @@ body {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ddd;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 메인 컨테이너 레이아웃 */
-.main-container {
-  display: flex; /* Sidebar와 Content를 가로로 배치 */
-  margin-top: 80px; /* Header 높이만큼 아래로 이동 */
-}
-
-/* 푸터 스타일 */
-footer {
-  margin-top: 40px;
-  text-align: center;
-  color: #6c757d;
-  /* Bootstrap muted text color */
-  font-size: 14px;
+.react-chatbot-kit-chat-container input:focus {
+  border-color: #8A1601;
+  box-shadow: 0 0 5px rgba(138, 22, 1, 0.5);
+  outline: none;
 }
 
 /* 옵션 버튼 및 컨테이너 스타일 */
@@ -112,7 +102,7 @@ footer {
 }
 
 .option-button {
-  background-color: #376b7e;
+  background-color: #8A1601;
   color: white;
   border: none;
   border-radius: 5px;
@@ -127,7 +117,7 @@ footer {
 }
 
 .option-button:hover {
-  background-color: #2c5564;
+  background-color: #A02C10;
 }
 
 /* 반응형 레이아웃 */
@@ -138,10 +128,13 @@ footer {
   }
 
   .option-button {
-    width: 100%;
+    width: 90%;
     font-size: 0.9rem;
+    padding: 8px 12px;
+    margin: 5px auto;
   }
 }
+
 
 
 

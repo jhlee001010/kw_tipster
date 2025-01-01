@@ -5,7 +5,7 @@ const Options = (props) => {
   const options = props.options.map((option) => (
     <button
       key={option.id}
-      onClick={option.handler}
+      onClick={() => option.handler(props.actionProvider)} // actionProvider 전달
       className="option-button"
     >
       {option.text}
