@@ -1,42 +1,28 @@
 import React from 'react';
+import Chatbot from 'react-chatbot-kit';
+import 'react-chatbot-kit/build/main.css';
+import config from './config';
+import MessageParser from './MessageParser';
+import ActionProvider from './ActionProvider';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS 가져오기
 
 function App() {
   return (
-    <div className="container">
-      <header className="App-header"> 
-        <h1 className="text-primary">Welcome to KW Tipster</h1>
-        <p className="lead">Your guide to course registration success!</p>
+    <div className="container-fluid">
+      <header className="App-header">
+        <h1 className="headertext">수강!팡</h1>
+        <p className="lead" style={{ marginLeft: "1rem" }}>모두의 수강신청의 정상화를 꿈꾸며!</p>
       </header>
-
-      <main>
-        <div className="row">
-          <div className="col-md-6 mb-3">
-            <div className="card">
-              <div className="card-body">
-                <h5 className="card-title">Tips for Beginners</h5>
-                <p className="card-text">
-                  Learn how to efficiently register for courses and plan your semester.
-                </p>
-                <button className="btn btn-primary">Learn More</button>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-6 mb-3">
-            <div className="card">
-              <div className="card-body">
-                <h5 className="card-title">Advanced Strategies</h5>
-                <p className="card-text">
-                  Master advanced techniques for creating the perfect schedule.
-                </p>
-                <button className="btn btn-success">Get Started</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-
+      
+      <div className="chatbot-container">
+        <Chatbot
+        config={config}
+        messageParser={MessageParser}
+        actionProvider={ActionProvider}
+        />
+      </div>
+      
       <footer className="mt-4 text-center">
         <p className="text-muted">&copy; 2024 KW Tipster</p>
       </footer>
