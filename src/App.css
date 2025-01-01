@@ -55,13 +55,14 @@ body {
 
 /* 봇 메시지와 사용자 메시지 정렬 */
 .react-chatbot-kit-chat-bot-message {
-  align-self: center;
+  align-self: flex-start;
+  margin: 0 !important;
   text-align: left;
 }
 
 .react-chatbot-kit-user-chat-message {
   align-self: center;
-  text-align: left;
+  text-align: left ;
 }
 
 .react-chatbot-kit-chat-container {
