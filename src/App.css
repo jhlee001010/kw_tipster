@@ -26,20 +26,53 @@ body {
   position: relative; /* Header는 별도의 레이어 */
 }
 
+.headertext {
+  color: #8a1601;
+}
+
+.chatbot-container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* 챗봇 메시지 정렬 CSS */
+.react-chatbot-kit-chat-container {
+  text-align: center; /* 전체 챗봇 컨테이너 중앙 정렬 */
+}
+
+.react-chatbot-kit-chat-messages-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 메시지 가운데 정렬 */
+}
+
+.react-chatbot-kit-chat-message {
+  max-width: 80%; /* 메시지 최대 너비 지정 */
+  align-self: center; /* 개별 메시지 중앙 정렬 */
+}
+
+/* 봇 메시지와 사용자 메시지 정렬 */
+.react-chatbot-kit-chat-bot-message {
+  align-self: center;
+  text-align: left;
+}
+
+.react-chatbot-kit-user-chat-message {
+  align-self: center;
+  text-align: left;
+}
+
+.react-chatbot-kit-chat-container {
+  width: 800px;
+}
+
 .main-container {
   display: flex; /* Sidebar와 Content를 가로로 배치 */
   margin-top: 80px; /* Header 높이만큼 아래로 이동 */
 }
 
-/* Sidebar styles */
-.sidebar {
-  width: 250px; /* Sidebar width */
-  position: fixed; /* Fix sidebar to the left */
-  top: 80px; /* Place below the header */
-  height: calc(100vh - 80px); /* Full height minus header height */
-  overflow-y: auto; /* Enable vertical scrolling */
-  padding-top: 20px;
-}
 
 /* 푸터 스타일 */
 footer {
