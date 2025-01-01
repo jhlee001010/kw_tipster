@@ -12,6 +12,8 @@ class MessageParser {
         this.actionProvider.handleClubTips();
       } else if (lowerCaseMessage.includes("시간관리")) {
         this.actionProvider.handleTimeManagementTips();
+      } else if (lowerCaseMessage.includes("옵션") || lowerCaseMessage.includes("선택")) {
+        this.actionProvider.handleOptions();
       } else {
         this.actionProvider.handleDefault();
       }
