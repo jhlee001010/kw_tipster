@@ -1,5 +1,5 @@
 # kw_tipster
-KW 신입생들을 위한 팁 제공 챗봇 프로젝트
+KW 신입생들을 위한 팁 제공 챗봇 프로젝트 > 이수학점계산 커리큘럼 
 
 # Getting Started with Create React App
 

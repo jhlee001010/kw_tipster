@@ -1,0 +1,91 @@
+
+#root{
+  display: flex;
+  justify-content: center;  /* 가로 중앙 정렬 */
+  align-items: flex-start;  /* 위쪽으로 정렬 */
+  height: 100vh;  /* 화면 높이 유지 */
+  padding-top: 30vh;  /* 화면 높이의 10%만큼 위쪽 여백 추가 */
+}
+
+.kredit-title{
+    color: #8a1601;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* 폼 컨테이너 */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
+  }
+  
+  /* 각 선택 박스 그룹 */
+  .stdnum-container,
+  .gradeyear-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  /* 라벨 스타일 */
+  label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  /* 드롭다운 스타일 */
+  select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  /* 드롭다운 호버 효과 */
+  select:hover {
+    border-color: #007bff;
+  }
+  
+  /* 버튼 스타일 */
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* 버튼 호버 효과 */
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* 반응형: 작은 화면에서도 적절히 조정 */
+  @media (max-width: 400px) {
+    .welcome-container {
+      padding: 20px;
+    }
+  
+    form {
+      width: 100%;
+    }
+  }  
