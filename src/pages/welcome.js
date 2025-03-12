@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../style/welcome.css"; // css import
+import "../style/Welcome.css"; // css import
 
 function Welcome() {
   const [studentId, setStudentId] = useState("");
@@ -10,7 +10,7 @@ function Welcome() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (studentId && year) {
-      navigate("/dashboard"); // 입력 후 다음 페이지로 이동
+      navigate("/Dashboard"); // 입력 후 다음 페이지로 이동
     } else {
       alert("학번과 학년을 입력해주세요.");
     }
